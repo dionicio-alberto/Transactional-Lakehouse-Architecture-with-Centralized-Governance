@@ -49,6 +49,6 @@
 
 ## Current Status
 - **Lifecycle Phase**: CONSTRUCTION (ACTIVE)
-- **Current Stage**: Functional Design Planning (Unit 2 - IaC)
-- **Next Stage**: Functional Design Execution (Unit 2)
-- **Status**: Unit 2 Functional Design plan generated with clarification questions. Pending user responses.
+- **Current Stage**: NFR Requirements Complete (Unit 2 - IaC)
+- **Next Stage**: NFR Design (Unit 2)
+- **Status**: Unit 2 Functional Design confirmed and modeled locally.
