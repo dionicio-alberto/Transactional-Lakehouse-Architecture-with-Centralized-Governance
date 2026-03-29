@@ -48,7 +48,7 @@
 - [ ] Operations - PLACEHOLDER
 
 ## Current Status
-- **Lifecycle Phase**: CONSTRUCTION (PENDING)
-- **Current Stage**: Units Generation Complete
-- **Next Stage**: Functional Design (Unit 1)
-- **Status**: Inception Phase complete. Ready to begin Construction.
+- **Lifecycle Phase**: CONSTRUCTION (ACTIVE)
+- **Current Stage**: NFR Requirements Complete (Unit 1)
+- **Next Stage**: NFR Design (Unit 1)
+- **Status**: Unit 1 NFR Requirements generated. Ready for NFR Design phase.

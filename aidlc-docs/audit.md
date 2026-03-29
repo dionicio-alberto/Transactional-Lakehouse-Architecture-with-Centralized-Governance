@@ -116,3 +116,51 @@
 **Context**: Units Gen completion
 
 ---
+
+## Units Generation - Incremental Enhancement Approved
+**Timestamp**: 2026-03-28T21:27:09.470417
+**User Input**: "Approved incremental simulation plan"
+**AI Response**: "Successfully updated all Inception artifacts (Requirements, Stories, Components, Methods, UOW) to reflect incremental simulation strategy."
+**Context**: Incremental ETL addition
+
+---
+
+## Construction Phase - Functional Design (Unit 1)
+**Timestamp**: 2026-03-28T21:29:30.667850
+**User Input**: "let's go to continue with the aidlc framework"
+**AI Response**: "Creating Functional Design Plan for Unit 1 (Data Simulator) with clarification questions."
+**Context**: Starting Construction Phase for Unit 1.
+
+---
+
+## Construction Phase - Functional Design (Unit 1) - Artifacts Generated
+**Timestamp**: 2026-03-28T21:32:38.502819
+**User Input**: "Done, check the answers and continue"
+**AI Response**: "Functional Design artifacts (business logic, domain entities, business rules) generated based on user responses: 20-year initial load, 1000 users, 30% LATAM, Parquet format."
+**Context**: Completed Functional Design for Unit 1.
+
+---
+
+## Construction Phase - Functional Design Update
+**Timestamp**: 2026-03-28T21:38:56.404802
+**User Input**: "i am this dataset, it is in data/raw... Adjust the domain entities."
+**AI Response**: "Updating Domain Entities based on Apple Market Dataset (1980–2026) fields (Date, Open, High, Low, Close, Volume)."
+**Context**: Re-evaluating Transaction Entity based on raw data metadata.
+
+---
+
+## Construction Phase - NFR Requirements (Unit 1)
+**Timestamp**: 2026-03-28T21:40:57.704534
+**User Input**: "I am ready, let's go"
+**AI Response**: "Creating NFR Requirements Plan for Unit 1 (Data Simulator) with clarification questions."
+**Context**: Starting NFR Requirements stage for Unit 1.
+
+---
+
+## Construction Phase - NFR Requirements Complete (Unit 1)
+**Timestamp**: 2026-03-28T21:43:10.961878
+**User Input**: "done, verify and continue"
+**AI Response**: "NFR artifacts generated. Execution bound to < 5 minutes using pandas for PyArrow Snappy parquet output. Local SSE-S3/KMS encryption deferred to AWS. Python logging confirmed."
+**Context**: Completed NFR Requirements for Unit 1.
+
+---

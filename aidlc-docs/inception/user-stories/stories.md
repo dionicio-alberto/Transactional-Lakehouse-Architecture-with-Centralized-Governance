@@ -5,12 +5,14 @@
 These stories are organized primarily by the personas and reflect the high-level security constraints (Row-Level Security, Column-Level Security, Dynamic Data Masking) defined by Lake Formation.
 
 ### Story 1: DataAdmin Unrestricted Oversight
+
 **As the DataAdmin**, I need unrestricted access to all tables in the lakehouse **so that** I can configure, audit, and troubleshoot the data platform without artificial limitations.
 
 **Acceptance Criteria**:
 - Given the DataAdmin role is active, when they query the `Users` or `Transactions` table, they can see all columns and all rows unmodified.
 
 ### Story 2: FinancialAnalyst Data Masking
+
 **As the FinancialAnalyst**, I need access to all transactional and user records while protecting sensitive PII **so that** I can perform comprehensive financial analysis globally without violating privacy laws.
 
 **Acceptance Criteria**:
@@ -18,6 +20,7 @@ These stories are organized primarily by the personas and reflect the high-level
 - The role must be able to view all rows (no Row-Level Security applied).
 
 ### Story 3: LatamAnalyst Regional Row & Column Security
+
 **As the LatamAnalyst**, I need to view transaction details strictly for my geographic region, and I must not see extraneous private details like emails **so that** my reporting complies with regional data sovereignty and "least privilege" principles.
 
 **Acceptance Criteria**:
@@ -28,16 +31,21 @@ These stories are organized primarily by the personas and reflect the high-level
 
 ## Epic 2: Data Pipeline & Processing Operations
 
-### Story 4: Automated Data Ingestion
-**As the DataAdmin**, I need the capability to systematically ingest real stock data and synthetic PII into the `raw-zone` bucket **so that** there is a reliable dataset ready for the ETL pipeline.
+### Story 4: Simulated Incremental Data Ingestion
+
+**As the DataAdmin**, I need the capability to ingest real stock data and synthetic PII into the `raw-zone` bucket in temporal batches (e.g., Year-by-Year) **so that** I can test the system's ability to handle incremental data growth and simulate a long-running platform.
 
 **Acceptance Criteria**:
-- A script provisions random PII (Names, SSN, Emails, Country) crossing it against Apple Stock historical facts.
-- The datasets successfully reside in S3 `raw-zone`.
+- A script provisions random PII (Names, SSNs, Emails, Countries) crossing it against Apple Stock historical facts.
+- The simulator can be invoked for specific "charges" (e.g., Batch 1: 2020-2021, Batch 2: 2022).
+- Batch datasets successfully reside in S3 `raw-zone` within a batch-organized prefix.
 
-### Story 5: Iceberg Transformation ETL
-**As the DataAdmin**, I need a PySpark Glue Job to transform the raw ingested data into the Apache Iceberg format in the `curated-zone` **so that** it benefits from ACID transactions, logical partitioning by year/month, and rapid scan times in S3.
+### Story 5: Incremental Iceberg Transformation ETL
+
+**As the DataAdmin**, I need a PySpark Glue Job to transform raw uploaded batches into the Apache Iceberg format in the `curated-zone` **so that** the lakehouse maintains history using ACID transactions and efficient `MERGE` operations.
 
 **Acceptance Criteria**:
 - A Glue 4.0+ job runs successfully.
-- The output in the `curated-zone` is registered in the Glue Data Catalog as Iceberg tables and partitioned by year/month.
+- New raw batches are correctly identified and processed (High Watermark or Batch Partition logic).
+- The curated-zone table is updated without full re-writes, utilizing Iceberg's transactional appends or upserts.
+- The output remains registered in the Glue Data Catalog and partitioned by year/month.
