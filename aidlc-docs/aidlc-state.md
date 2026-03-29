@@ -49,6 +49,6 @@
 
 ## Current Status
 - **Lifecycle Phase**: CONSTRUCTION (ACTIVE)
-- **Current Stage**: NFR Requirements Complete (Unit 1)
-- **Next Stage**: NFR Design (Unit 1)
-- **Status**: Unit 1 NFR Requirements generated. Ready for NFR Design phase.
+- **Current Stage**: Infrastructure Design Complete (Unit 1)
+- **Next Stage**: Code Generation (Unit 1)
+- **Status**: Unit 1 Infrastructure Design artifacts generated. Ready for Code Generation phase.
