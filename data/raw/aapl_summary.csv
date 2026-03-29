@@ -1,0 +1,12 @@
+file_name,rows
+aapl_master_dataset.csv,11407
+aapl_stock_prices.csv,11407
+aapl_historical_data.csv,2513
+aapl_balance_sheet.csv,5
+aapl_income_statement.csv,5
+aapl_cash_flow.csv,5
+aapl_quarterly_financials.csv,5
+aapl_dividends.csv,90
+aapl_splits.csv,5
+aapl_technical_indicators.csv,14
+aapl_institutional_ownership.csv,10
